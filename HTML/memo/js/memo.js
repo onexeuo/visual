@@ -67,6 +67,7 @@ $(function(){
         }else{
             return JSON.parse(memoList);
         }
+        
     }
 
     //localStorage에 메모 객체를 저장한다.
