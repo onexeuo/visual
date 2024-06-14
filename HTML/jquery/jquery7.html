@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery 7</title>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="js/jquery7.js"></script>
+    <style>
+        #content{
+            display: block;
+            border:1px solid #333;
+        }
+        .class1{
+            border:1px solid red;
+            font-size:20px ;
+            border-width: 7px;
+        }
+        
+        .class2{
+            border:1px dashed green;
+            border-width: 10px;
+            font-size:30px ;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="wrapper">
+        <p>
+            <a id="a1">naver</a>
+        </p>
+        <p>
+            <!-- before --><!-- prepend --><span id="content">content</span><!-- append --><!--after -->
+        </p>
+        <p>
+            <ul>
+                <li>apple</li>
+                <li>banana</li>
+                <li>peach</li>
+            </ul>
+            <input id="empty" type="button" value="empty" />
+            <input id="remove" type="button" value="remove" />
+        </p>
+        <p>
+            <input id="txt2" type="text" /><br />
+            <input id="btnc1add" type="button" value="class1 apply" />
+            <input id="btnc1remove" type="button" value="class1 delete" />
+            <input id="btnc1toggle" type="button" value="class1 toggle" /><br />
+            <input id="btnc2add" type="button" value="class2 apply" />
+            <input id="btnc2remove" type="button" value="class2 delete" />
+            <input id="btnc2toggle" type="button" value="class2 toggle" />
+        </p> 
+    </div>
+</body>
+</html>
