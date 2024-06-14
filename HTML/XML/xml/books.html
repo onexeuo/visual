@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+</head>
+<body>
+
+    <script>
+        window.onload = function(){
+            
+            let xhr;
+            if(XMLHttpRequest){
+                xhr = new XMLHttpRequest();
+                if(xhr){
+                    xhr.open("GET", "books.xml", false);
+                    xhr.send();
+                    
+                    let documentObj = xhr.responseXML;
+                    let bookstore = documentObj.documentElement;
+                    let books = bookstore.childNodes;
+                    let bookstoreleng = books.length;
+                    
+                    for(let i=0; i<bookstoreleng; i++){
+                        if(books[i].nodeType==1){
+                            let bookChildren = books[i].childNodes
+                            let bookChildrenLeng = bookChildren.length;
+                            console.log("\n책 " + "정보");
+                            for(let j=0; j<bookChildrenLeng; j++){
+                                if(bookChildren[j].nodeType==1){
+                                    if(bookChildren[j].nodeName=='title'){
+                                        console.log("제목 : " + bookChildren[j].firstChild.nodeValue);
+                                    }
+                                    if(bookChildren[j].nodeName=='author'){
+                                        console.log("작가 : " + bookChildren[j].firstChild.nodeValue);
+                                    }
+                                    if(bookChildren[j].nodeName=='year'){
+                                        console.log("출판년도 : " + bookChildren[j].firstChild.nodeValue);
+                                    }
+                                    if(bookChildren[j].nodeName=='price'){
+                                        console.log("가격 : " + bookChildren[j].firstChild.nodeValue);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

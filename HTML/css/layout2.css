@@ -1,0 +1,56 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+div{
+    font-size:20px;
+}
+
+header{
+    height:40px;
+    background-color: yellowgreen ;
+}
+
+header nav{
+
+}
+
+header nav ul{
+    list-style: none;
+    /* background-color: antiquewhite; */
+}
+
+header nav ul li{
+    display:inline;
+    margin: 0px 20px;
+}
+
+#content{
+
+}
+
+#content aside{
+    float: left;
+    width:25%; 
+    background-color: beige;
+}
+#content #cont{
+    float: left;
+    width: 50%;
+}
+
+footer{
+    clear:both;
+    font-size:12px;
+    height:25px;
+    background-color: orangered ;
+    position:absolute;
+    bottom:0px;
+    width:100%;
+}
+
+footer p{
+    text-align: center;
+}
+

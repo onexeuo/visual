@@ -1,0 +1,16 @@
+computer{
+    width:800px;
+    height:100px;
+    background-color: antiquewhite;
+    font-size: 20px;
+    display: block;
+}
+cpu{
+    background-color: aqua;
+}
+memory{
+    background-color: yellow;
+}
+gpu{
+    background-color: yellowgreen;
+}

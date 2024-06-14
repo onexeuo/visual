@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>korea IT</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        body{
+            width:100%;
+            height:100%;
+            background: url(https://itgn.cafe24.com/images/body_bg.gif);
+            margin:0 auto;
+            
+        }
+        
+        #wrapper{
+            display: block;
+            text-align: center;
+            margin: auto;
+            width: 300px;
+            height:100%;
+        }
+
+        #wrapper>p{
+            margin-bottom: 5px;
+        }
+        #cont{
+            display:inline-block;
+            margin-top: 30px;
+            padding:0;
+            width:100%;
+            position:relative;
+        }
+        #cont_wrapper{
+            background-color: blue;
+            
+        }
+        #cont img{
+            padding-bottom: 8px;
+            width:25%;
+            float:left;
+            border: 1px solid #c0c0c0;
+            box-sizing: border-box;
+            
+        }
+        #word_wrapper{
+            font-size: 13px;
+            float: left;
+            width: 300px;
+            background-color: pink;
+        }
+        #word_wrapper p{
+            display: inline-flex;
+            margin:0 5px;
+            /* width: 300px; */
+            justify-content: space-between;
+        }
+
+        #input_wrapper{
+            /* display: none; */
+            padding: 10px;
+            position:absolute;
+            top:76px;
+            background-color: rgb(255, 245, 185) ;
+            border:1px solid red;
+        }
+        
+        input{
+            float: left;
+            display: block;
+            margin:3px;
+        }
+        .txt, .pass{
+            width:100%;
+        }
+        .find{
+            background-color: red;
+            color:#fff;
+            border:1px solid #fff;
+            padding: 1px;
+        }
+        .log{
+            float: right;
+            background-color: skyblue;
+            color:#fff;
+            border:1px solid #fff;
+            padding: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div id="big_wrap">
+        <div id="wrapper">
+            <p>코리아IT아카데미 강남</p>
+            <p>Total Management System</p>
+
+            <div id="cont">
+                <ul id="cont_wrapper">
+                    <li><img src="https://itgn.cafe24.com/images/bg_staff.png" alt="행정모드"/></li>
+                    <li><img src="https://itgn.cafe24.com/images/bg_teacher.png" alt="강사모드"/></li>
+                    <li><img src="https://itgn.cafe24.com/images/bg_student.png" alt="훈련생모드"/></li>
+                    <li><img src="https://itgn.cafe24.com/images/bg_seval.png" alt="이수자평가"/></li>
+                </ul>
+                <div id="word_wrapper">
+                    <p>행정모드</p>
+                    <p>강사모드</p>
+                    <p>훈련생모드</p>
+                    <p>이수자평가</p>
+                </div>
+                <div id="input_wrapper">
+                    <input class="txt" type="text" name="text" placeholder="아이디를 입렵하세요"/>
+                    <input class="pass" type="password" name="pass" placeholder="비밀번호를 입력하세요"/>
+
+                    <input class="find" type="button" name="button" value="아이디/비밀번호찾기"/>
+                    <input class="log" type="button" name="log" value="로그인"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

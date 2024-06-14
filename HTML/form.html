@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        input{
+            display: block;
+            margin:10px 0px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+        <input type="text" name="txt" />
+        <input type="password" name="pwd" />
+        <input type="tel" name="tel" pattern="\d{3}-\d{4}-\d{4}" />
+        <input type="email" name="email"  />
+        <input type="date" name="date" />
+        <input type="time" name="time" />
+        <input type="datetime" name="datetime" />
+        <input type="datetime-local" name="datetime-local" />
+        <input type="number" name="number" min="0" max="50" step="2" />
+        <input type="range" name="range" min="1000" max="10000" />
+        <input type="button" name="button" value="완성!" />
+        <button name="button2">이다!</button>
+        <input type="file" name="file" />
+        <input type="hidden" name="hdn" value="123" />
+        
+        아침 <input type="radio" name="rdo" />
+        점심 <input type="radio" name="rdo" />
+        저녁 <input type="radio" name="rdo" />
+
+        여행 <input type="checkbox" name="cbox1" />
+        요리 <input type="checkbox" name="cbox2" />
+        독서 <input type="checkbox" name="cbox3" />
+
+        <select name="slt" multiple>
+            <optgroup value="phone">
+                <option value="iphone12">iphone12</option>
+                <option value="iphone13">iphone13</option>
+            </optgroup>
+            <optgroup value="location">
+                <option value="river">river</option>
+                <option value="land">land</option>
+            </optgroup>
+        </select>
+
+        <textarea name="ta" rows="10" cols="10" placeholder="입력하세요!"></textarea>
+
+        <input type="submit" value="전송" />
+        <input type="reset" value="초기화" />
+    </form>
+</body>
+</html>

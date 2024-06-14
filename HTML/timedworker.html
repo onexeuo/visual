@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web worker</title>
+    <script>
+        let worker;
+        function startWorker(){
+            if(worker){
+                if (!worker){
+                    worker = new worker("js/timedworker.js");
+                }
+                worker.onmessage = function(event) {
+                    document.getElementById("result").innerHTML = event.data;
+                }
+            }else{
+                document.getElementById("result").innerHTML = "지원하지 않음!";
+            }
+        }
+
+        function stopWorker(){
+            worker.terminate();
+            worker = undefined;
+        }
+    </script>
+</head>
+<body>
+    <p id="result"></p>
+    <button onclick="startWorker()">start</button>
+    <button onclick="stopWorker()">stop</button>
+</body>
+</html>

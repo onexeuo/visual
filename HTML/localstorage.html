@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lacalstorage</title>
+    
+</head>
+<body>
+    <script>
+        if(localStorage){
+            localStorage.setItem("name","one");
+            localStorage.setItem("name2","two");
+            console.log(localStorage.getItem("name"));
+            console.log(localStorage.getItem("name2"));
+        }else{
+            console.log("로컬스토리지를 지원하지 않아요");
+        }
+        
+    </script>
+</body>
+</html>
