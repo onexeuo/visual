@@ -12,13 +12,11 @@
 
 
 $(function(){
-    const memoArr =[];
-    const memoObj
-    = { "subject": "제목" , "content": "내용", "regdate": "등록일시" }
-    memoArr[memoArr.lenth] = memoObj;
-        if(localStorage){localStorage.setItem("memoList",JSON.stringify(memoObj));
-        localStorage.setItem(localStorage,"memoList")
-    }
+    // const memoArr =[];
+    // memoArr[memoArr.lenth] = memoObj;
+    //     if(localStorage){localStorage.setItem("memoList",JSON.stringify(memoObj));
+    //     localStorage.setItem(localStorage,"memoList")
+    // }
 
 /*
     localStorage
@@ -29,6 +27,7 @@ $(function(){
         { "subject": "제목" , "content": "내용", "regdate": "등록일시" }
     ]
 */
+    //제목과 내용을 입력하고 등록 버튼 누르면 메모 객체 생성해서 addMemo 호출
 
     $("#addBtn").click(function(){
         const memoObj = {
@@ -56,11 +55,11 @@ $(function(){
         }
     }
 
-    //localStorage의 메모리스트에 메모를 추가하는 함수
+    //localStorage에 메모 객체를 저장한다.
     function addMemo(memoObj){
         const memoListArr = getMemoList(); 
         memoListArr[memoListArr.length] = memoObj;
-        localStorage.setItem("memoList", JSON.parse(memoListArr));
+        localStorage.setItem("memoList", JSON.stringify(memoListArr));
     }
 
     //localStorage의 메모리스트에서 메모를 삭제하는 함수
