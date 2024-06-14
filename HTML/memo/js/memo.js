@@ -80,7 +80,8 @@ $(function(){
 
     //localStorage의 메모리스트에서 메모를 삭제하는 함수
     function removeMemo(key){
-        // const remove(memoList)
+        const memoIdx = memoList[key]
+
     }
 
     //최신메모를 content에 보여주는 함수
