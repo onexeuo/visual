@@ -97,7 +97,7 @@ $(function(){
         const memoList = getMemoList().reverse();
         const memoListLeng = memoList.length;
         for(let i=0; i<memoListLeng; i++){
-            $("#list").append("<li id='memo"+i+"'><br />"+ memoList[i].title+"<input class='deleteBtn' type='button' value='delete'/></li>");
+            $("#list").append("<li id='memo"+i+"'>"+newDate()+"<br />"+ memoList[i].title+"<input class='deleteBtn' type='button' value='delete'/></li>");
         }if (memoListLeng > 0){
             const firstMemo = memoList[memoListLeng -1 ];
             $("#h1Text").text(firstMemo.regdate);
