@@ -47,7 +47,7 @@ $(function(){
 
 
     //리스트를 클릭했을때 오른쪽에 내용이 보일 수 있게 하기
-    $("#list li").click(function(){
+    $(document).on('click','#list li', function(){
         const memoId = $(this).attr("id").substr(4);
         const memoList = getMemoList();
         const memo = memoList[memoId];
@@ -104,9 +104,10 @@ $(function(){
             $("#h2Text").text(firstMemo.title);
             $("#h3Text").text(firstMemo.content);
         }else{
-            $("#h1Text").empty();
-            $("#h2Text").empty();
-            $("#h3Text").empty();
+            // $("#h1Text").empty();
+            // $("#h2Text").empty();
+            // $("#h3Text").empty();
+            $("#list li").show();
         }
     }
 
