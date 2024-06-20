@@ -1,0 +1,37 @@
+@charset "utf-8";
+*{
+    padding:0;
+    margin:0;
+}
+#wrapper{
+
+}
+#content{
+    width:10000px;
+    height:1000px;
+    border:1px solid #333;
+    margin:10px;
+    position:relative;
+}
+img{
+    display: inline-block; position: absolute; 
+    top:200px; left: 0px; height:100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
