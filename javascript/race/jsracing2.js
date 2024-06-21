@@ -43,6 +43,9 @@ $(function(){
         location.reload(true);
     }); //goBtn
 
+    // if($("#car1").css("left","1800px") || $("#car2") || $("#car3"))
+
+
 }); // end
 
 const makeTimer =  function(id, f){
@@ -69,7 +72,7 @@ const pause = function() {
 };
 
 const getRanMulNum = function() {
-    return Math.ceil(Math.random()*10) + 1;
+    return Math.ceil(Math.random()*5) + 1;
 };
 
 const move = function(direction){
