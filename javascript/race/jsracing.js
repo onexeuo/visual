@@ -1,66 +1,134 @@
 let timer = null;
-let ballTop = 1;
-let ballLeft = 1;
+let timer2 = null;
+let carTop = 1;
+let car2Top = 1;
+let carLeft = 100;
+let car2Left = 1;
+let movePixel = 1;
+let movePixel2 = 1;
+let mvePixelRan = Math.random(movePixel2);
+const min = 13;
+const Wmax = 1820;
+const Hmax = 950;
+const interval = 5;
+const interval2 = 5;
+
+// let cars = [car, car2, car3];
 
 $(function(){
+    makeTimer("strBtn", move("right2"));
+    $("#strBtn").on("click", function(){
 
-    $("#pause").on("click", function() {
-        pause();
-    }); 
+        $("#strBtn").hide();
+        $("#goBtn").show();
 
-    $("#moveToBottom").on("click", function() {
-        pause();
-        timer = setInterval(moveToBottom, 5);
-    });
-    $("#moveToTop").on("click", function() {
-        pause();
-        timer = setInterval(moveToTop, 5);
-    });
-    $("#moveToRight").on("click", function() {
-        pause();
-        timer = setInterval(moveToRight, 5);
-    });
-    $("#moveToLeft").on("click", function() {
-        pause();
-        timer = setInterval(moveToLeft, 5);
-    });
 
+        makeTimer2("moveToTop", move2("top"));
+        makeTimer2("moveToBottom", move2("bottom"));
+        makeTimer2("moveToLeft", move2("left"));
+        makeTimer2("moveToRight", move2("right"));
+
+        $("#speed").on("click", function(){
+            movePixel2++;
+            // $("#speed").val(movePixel);
+            // console.log($("#speed").val(ballSpeed));
+        });
+
+        $("#pause").on("click", function() {
+            ToggleEvent(pause2());
+        }); 
+
+        if($("#car").Wmax){
+            alert('END !');
+        }
+    });
 });
+
+
+const makeTimer =  function(id, f){
+    $("#"+id).on("click", function(){
+        pause();
+        timer = setInterval(f, interval);
+    })
+};
+const makeTimer2 =  function(id, f){
+    $("#"+id).on("click", function(){
+        pause2();
+        timer2 = setInterval(f, interval2);
+    });
+};
+
 
 const pause = function() {
     clearInterval(timer);
 };
-
-const moveToTop = function() {
-    if (ballTop >= 20) {
-        console.log("ballTop:" + ballTop);
-        ballTop--;
-        $("#ball").css("top", ballTop+"px");
-    }
-};
-const moveToBottom = function() {
-    if (ballTop <= 900) {
-        console.log("ballTop:" + ballTop);
-        ballTop++;
-        $("#ball").css("top", ballTop+"px");
-    }
+const pause2 = function() {
+    clearInterval(timer2);
+    // clearInterval(timer2);
 };
 
-const moveToLeft = function() {
-    if (ballLeft >= 0) {
-        console.log("ballLeft:" + ballLeft);
-        ballLeft--;
-        $("#ball").css("left", ballLeft+"px");
+const move = function(direction){
+    switch(direction){
+        case "right2" : {
+            return function(){
+                if(carLeft <= Wmax){
+                   carLeft += movePixel;
+                    $("#car").css("left", carLeft+"px");
+                }
+            }
+        }
     }
-};
-const moveToRight = function() {
-    if (ballLeft <= 10000) {
-        console.log("ballLeft:" + ballLeft);
-        ballLeft++;
-        $("#ball").css("left", ballLeft+"px");
-    }
-};
+}
 
+const move2 = function(direction){
+    switch(direction){
+        case "top" : {
+            return function(){
+                if(car2Top >= min){
+                    car2Top -= movePixel2;
+                    $("#car2").css("top", car2Top+"px");
+                }
+            }
+        }
+        case "bottom" : {
+            return function(){
+                if(car2Top <= Hmax){
+                    car2Top += movePixel2;
+                    $("#car2").css("top", car2Top+"px");
+                }
+            }
+        }
+        case "left" : {
+            return function(){
+                if(car2Left >= min){
+                    car2Left -= movePixel2;
+                    $("#car2").css("left", car2Left+"px");
+                }
+            }
+        }
+        case "right" : {
+            return function(){
+                if(car2Left <= Wmax){
+                    car2Left += mvePixelRan;
+                    $("#car2").css("left", car2Left+"px");
+                }
+            }
+        }
+    }
+}
+
+const move3 = function(direction){
+    switch(direction){
+        case "right3" : {
+            return function(){
+                if(car2Left <= Wmax){
+                    car2Left += mvePixelRan;
+                    $("#car3").css("left", car2Left+"px");
+                }
+            }
+        }
+    }
+}
 
 
 

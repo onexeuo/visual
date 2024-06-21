@@ -4,22 +4,42 @@
     margin:0;
 }
 #wrapper{
-
+    background-color: #333;
+    width:10000px;
+    height:1100px;
+    position:relative;
 }
 #content{
-    width:10000px;
+    width:1970px;
     height:1000px;
     border:1px solid #333;
     margin:10px;
-    position:relative;
+    background-color: #fff;
 }
-img{
+#car1{
     display: inline-block; position: absolute; 
-    top:200px; left: 0px; height:100px;
+    top:300px; height:100px;
+}
+#car2{
+    display: inline-block; position: absolute; 
+    top:500px; height:100px;
+}
+#car3{
+    display: inline-block; position: absolute; 
+    top:700px; height:100px;
 }
 
-
-
+#strBtn{
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size:40px;
+    color: red;
+}
+#goBtn{
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size:40px;
+    color: red;
+    display: none;
+}
 
 
 
