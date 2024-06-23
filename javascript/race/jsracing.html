@@ -4,21 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="jsracing.js"></script>
+    <script src="jsracing2.js"></script>
     <link rel="stylesheet" href="jsracing.css">
     <title>jsracing</title>
 </head>
 <body>
     <div id="wrapper">
+        <input id="strBtn" type="button" value="START">
+        <input id="goBtn" type="button" value="STOP">
+        <input id="reBtn" type="button" value="RESET">
         <div id="content">
-            <img src="../insideout2.jpg" id="ball">
-            <p>
+            <img src="../img/car1_1.png" id="car1" class="carImg">
+            <img src="../img/car2_1.png" id="car2" class="carImg">
+            <img src="../img/car3_1.png" id="car3" class="carImg">
+            <img src="../img/car4_1.png" id="car4" class="carImg">
+            <!-- <p>
                 <input id="moveToLeft" type="button" value="move To Left" >&nbsp;
                 <input id="pause" type="button" value="pause" >&nbsp;
                 <input id="moveToRight" type="button" value="move To Right" >&nbsp;
                 <input id="moveToTop" type="button" value="move To Top" >&nbsp;
                 <input id="moveToBottom" type="button" value="move To Bottom" >&nbsp;
-            </p>
+            </p> -->
+        </div>
+        <div id="ranking">
+            <ul >
+                <li>1.</li>
+                <li>2.</li>
+                <li>3.</li>
+                <li>4.</li>
+            </ul>
         </div>
     </div>
 </body>

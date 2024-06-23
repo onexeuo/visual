@@ -2,10 +2,11 @@
 *{
     padding:0;
     margin:0;
+    list-style: none;
 }
 #wrapper{
     background-color: #333;
-    width:10000px;
+    width:2200px;
     height:1100px;
     position:relative;
 }
@@ -14,11 +15,11 @@
     height:1000px;
     border:1px solid #333;
     margin:10px;
-    background-color: #fff;
+    background:url(../img/background.png) no-repeat center/cover;
 }
 #car1{
     display: inline-block; position: absolute; 
-    top:300px; height:100px;
+    top:300px; width:170px;
 }
 #car2{
     display: inline-block; position: absolute; 
@@ -28,21 +29,38 @@
     display: inline-block; position: absolute; 
     top:700px; height:100px;
 }
+#car4{
+    display: inline-block; position: absolute; 
+    top:900px; height:100px;
+}
 
 #strBtn{
     background-color: rgba(0, 0, 0, 0.1);
     font-size:40px;
     color: red;
+    padding: 20px;
 }
 #goBtn{
     background-color: rgba(0, 0, 0, 0.1);
     font-size:40px;
     color: red;
     display: none;
+    padding: 20px;
+}
+#reBtn{
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size:40px;
+    color: red;
+    padding: 20px;
 }
 
-
-
+#ranking{
+    color:#fff;
+    position: absolute;
+    top:100px;
+    right:100px;
+    font-size:30px;
+}
 
 
 

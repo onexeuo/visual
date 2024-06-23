@@ -19,29 +19,57 @@ let carLeft3 = 1;
 let movePixel3 = 0; //Math.floor(Math.random()*10);
 const interval3 = 5;
 
+// car4 green
+let timer4 = null;
+let carTop4 = 1;
+let carLeft4 = 1;
+let movePixel4 = 0; //Math.floor(Math.random()*10);
+const interval4 = 5;
+
 // ALL
-const min = 13;
+let frameCount = 0;
+let carSpeed = 100;
+const WHmin = 13;
 const Wmax = 1820;
 const Hmax = 950;
-// let movePixelRan = Math.random(1);
+// const image = document.getElementsByClassName('.carImg');
+
+
 
 $(function(){
     makeTimer("strBtn", move("right"));
     makeTimer2("strBtn", move2("right"));
     makeTimer3("strBtn", move3("right"));
+    makeTimer4("strBtn", move4("right"));
+
+
+
     console.log(movePixel);
     console.log(movePixel2);
     console.log(movePixel3);
+    console.log(movePixel4);
 
     $("#strBtn").on("click", function(){
         $("#strBtn").hide();
         $("#goBtn").show();
+        imgAnimate(true);
 
     }); //strBtn
 
     $("#goBtn").on("click", function(){
-        location.reload(true);
+        clearInterval(timer);
+        clearInterval(timer2);
+        clearInterval(timer3);
+        clearInterval(timer4);
+        imgAnimate(false);
+        
+        $("#goBtn").hide();
+        $("#strBtn").show();
     }); //goBtn
+    
+    $("#reBtn").on("click",function(){
+        location.reload(true);
+    })
 
     // if($("#car1").css("left","1800px") || $("#car2") || $("#car3"))
 
@@ -50,30 +78,49 @@ $(function(){
 
 const makeTimer =  function(id, f){
     $("#"+id).on("click", function(){
-        // pause();
         timer = setInterval(f, movePixel);
     })
 };
 const makeTimer2 =  function(id, f){
     $("#"+id).on("click", function(){
-        // pause();
         timer2 = setInterval(f, movePixel2);
     });
 };
 const makeTimer3 =  function(id, f){
     $("#"+id).on("click", function(){
-        // pause();
         timer3 = setInterval(f, movePixel3);
     });
 };
-
-const pause = function() {
-    clearInterval(timer);
+const makeTimer4 =  function(id, f){
+    $("#"+id).on("click", function(){
+        timer4 = setInterval(f, movePixel4);
+    });
 };
+
+const imgAnimate = function(){
+    const imgTimer1 = setInterval(function(){
+        $("#car1").attr("src", `../img/car1_${frameCount++%6+1}.png`);
+    }, carSpeed);
+
+    const imgTimer2 = setInterval(function(){
+        $("#car2").attr("src", `../img/car2_${frameCount++%22+1}.png`);
+    }, carSpeed);
+
+    const imgTimer3 = setInterval(function(){
+        $("#car3").attr("src", `../img/car3_${frameCount++%3+1}.png`);
+    }, carSpeed);
+
+    const imgTimer4 = setInterval(function(){
+        $("#car4").attr("src", `../img/car4_${frameCount++%3+1}.png`);
+    }, carSpeed);
+};
+
 
 const getRanMulNum = function() {
     return Math.ceil(Math.random()*5) + 1;
 };
+
+
 
 const move = function(direction){
     switch(direction){
@@ -111,6 +158,20 @@ const move3 = function(direction){
                     carLeft3 += Math.random()*getRanMulNum();
                     console.log("car3:"+carLeft3);
                     $("#car3").css("left", carLeft3+"px");
+                }
+            }
+        }
+    }
+};
+
+const move4 = function(direction){
+    switch(direction){
+        case "right" : {
+            return function(){
+                if(carLeft4 <= Wmax){
+                    carLeft4 += Math.random()*getRanMulNum();
+                    console.log("car4:"+carLeft4);
+                    $("#car4").css("left", carLeft4+"px");
                 }
             }
         }
