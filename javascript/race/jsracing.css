@@ -23,28 +23,21 @@
 }
 #car2{
     display: inline-block; position: absolute; 
-    top:500px; height:100px;
+    top:500px; width:170px;
 }
 #car3{
     display: inline-block; position: absolute; 
-    top:700px; height:100px;
+    top:700px; width:170px;
 }
 #car4{
     display: inline-block; position: absolute; 
-    top:900px; height:100px;
+    top:900px; width:170px;
 }
 
 #strBtn{
     background-color: rgba(0, 0, 0, 0.1);
     font-size:40px;
     color: red;
-    padding: 20px;
-}
-#goBtn{
-    background-color: rgba(0, 0, 0, 0.1);
-    font-size:40px;
-    color: red;
-    display: none;
     padding: 20px;
 }
 #reBtn{
