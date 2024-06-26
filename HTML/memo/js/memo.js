@@ -54,7 +54,7 @@ $(function(){
         $("#h1Text").text(memo.regdate);
         $("#h2Text").text(memo.title);
         $("#h3Text").text(memo.content);
-    })
+    });
 
 
     //날짜

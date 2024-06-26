@@ -87,7 +87,14 @@ const kang = {
 };
 kang.printThis();
 
+/*
+    이벤트핸들러내에서의 this는 이벤트타겟객체
 
+    // btn : 이벤트타겟객체, onclick : 이벤트 속성, 이벤트명 : click, funcrion(){} : 이벤트 핸들러(이벤트리스너)
+    btn.onclick = function(){
+        console.log(this);  // btn
+    };
+*/ 
 
 
 

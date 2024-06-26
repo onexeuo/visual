@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="stockmanager.js"></script>
+    <script src="shop.js"></script>
+    <script src="stock.js"></script>
+    <link rel="stylesheet" href="stockmanager.css">
+    <title>Stock Manager</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>STOCKMANAGER</h1>
+        <div id="shopStock">
+            <div id="shop">
+                <h2>SHOP</h2>
+                <p id="shopTop">
+                    <input id="shopname" type="text" placeholder="shop name"/>
+                    <input id="shopAdd" type="button" value="add" />
+                </p>
+                <ul id="shopList">
+                    <li id="shopFirList">
+                        <p>NO.</p>
+                        <p>SHOP</p>
+                        <p>COUNT</p>
+                        <p>FIX</p>
+                        <p>DELETE</p>
+                    </li>
+                    <li>shop1<input id="shopDelete" type="button" value="delete" />
+                        <input id="shopFix" type="button" value="fix" /></li>
+                </ul>
+            </div>
+            <div id="stock">
+                <h2>STOCK</h2>
+                <p id="stockTop">
+                    <input id="stockname" type="text"  placeholder="stock name"/>
+                    <input id="stockCount" type="text" placeholder="stock count" />
+                    <input id="stockDate" type="text"  placeholder="date"/>
+                    <input id="stockAdd" type="button" value="add" />
+                </p>
+                <ul id="stockList">
+                    <li id="stockFirList">
+                        <p>NO.</p>
+                        <p>STOCK</p>
+                        <p>COUNT</p>
+                        <p>JOIN DATE</p>
+                        <p>ADD DATE</p>
+                        <p>FIX</p>
+                        <p>DELETE</p>
+                    </li>
+                    <li>stock1<input id="stockDelete" type="button" value="delete" />
+                        <input id="stockFix" type="button" value="fix" /></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
