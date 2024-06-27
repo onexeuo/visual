@@ -55,7 +55,7 @@ console.log(arr7.includes(5));
 // 배열 요소 추가/삭제
 const arr8 = arr7.push(6);
 console.log(arr7);
-console.log(arr8);  // length
+console.log("arr8: "+arr8);  // length
 
 const arr9 = arr7.pop(6);
 console.log(arr7);
