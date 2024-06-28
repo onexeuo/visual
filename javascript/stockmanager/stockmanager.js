@@ -1,7 +1,8 @@
 // class stockmanager
 
 $(() => {
-
+    // 시간
+    setInterval(getTime,1000);
     
     //localstorage 초기화
     initLocalStorage();
@@ -10,11 +11,16 @@ $(() => {
     shopFirst();
     printShopList();
 
+    //재고목록 출력
+    stockFirst();
+    printStockList();
+    
     //이벤트 핸들러 등록
     // 매장추가버튼
     $("#shopAdd").on('click', () => {
         writeShop();
     });
+    
     //매장삭제버튼
     $("#shopDelete").on('click', () => {
 
@@ -25,7 +31,7 @@ $(() => {
     });
 
     //재고추가 버튼
-    $("#stockAdd").on('click', ()=>{
+    $("#stockAdd").on('click', () => {
         writeStock();
     })
 
@@ -54,6 +60,7 @@ const writeShop = () => {
     const shopArr = JSON.parse(localStorage.getItem('shopList'));
     shopArr.push(new Shop(getNextShopSeq(), $("#shopname").val(), 0))
     localStorage.setItem('shopList', JSON.stringify(shopArr));
+    printShopList();
 }
 
 //매장번호 시퀀스
@@ -65,10 +72,10 @@ const getNextShopSeq = () => {
 
 //매장 첫번째 목록줄
 const shopFirst = () => {
-    let firli = $('<li id="shopFirList"></li>');
-        firli.append($('<p>NO.</p> <p>SHOP</p> <p>COUNT</p> \
+    let shopfirli = $('<li id="shopFirList"></li>');
+    shopfirli.append($('<p>NO.</p> <p>SHOP</p> <p>COUNT</p> \
                     <p>FIX</p> <p>DELETE</p>'));
-        $("#shopList").append(firli);
+        $("#shopList").append(shopfirli);
 }
 
 // 매장목록
@@ -78,22 +85,36 @@ const getShopList = () => {
 
 // 매장목록 출력
 const printShopList = () => {
+    $('#shopList').html('');
     getShopList().forEach(shop => {
-        let li = $('<li></li>');
-        li.append($(shop.shno, shop.shname, shop.count +
-        '<input id="shopDelete" type="button" value="delete" /><input id="shopFix" type="button" value="fix" />'));
-        $('#shopList #shopFirList').append();
+        let shopLi = $('<li id="shopSecList"></li>');
+        shopLi.append('<p>'+shop.shno+'</p><p>' + shop.shname +'</p><p>' + shop.shtotst + '</p> \
+        <input id="shopFix" type="button" value="fix" /><input id="shopDelete" type="button" value="delete" />');
+        $('#shopList').append(shopLi);
     });
 }
 
+const getTime = () => {
+    //현재시간
+    const date = new Date();
 
+    let yoil = '';
+    switch (date.getDay()){
+        case 0 : yoil = '(일)'; break;
+        case 1 : yoil = '(월)'; break;
+        case 2 : yoil = '(화)'; break;
+        case 3 : yoil = '(수)'; break;
+        case 4 : yoil = '(목)'; break;
+        case 5 : yoil = '(금)'; break;
+        case 6 : yoil = '(토)'; 
+    }
 
+    //시간 문자열 생성
+    let timestr = `${date.getFullYear()}년 ${date.getMonth()+1}월 ${date.getDate()}일 ${date.getHours() > 12 ? '오후' : '오전'}\
+    ${yoil} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()} `; 
 
-
-
-
-
-
+    return $('#stockDate').html(timestr);
+}
 
 
 
@@ -104,6 +125,7 @@ const writeStock = () => {
     const stockArr = JSON.parse(localStorage.getItem('stockList'));
     stockArr.push(new Stock(getNextStockSeq(), $("#stockname").val(), 0));
     localStorage.setItem('stockList', JSON.stringify(stockArr));
+    printStockList();
 }
 
 //재고번호 시퀀스
@@ -113,10 +135,31 @@ const getNextStockSeq = () => {
     return Number(nextStockSeq);
 }
 
+// 재고 첫번째 목록줄
+const stockFirst = () => {
+    let stockfirli = $('<li id="stockFirList"></li>');
+    stockfirli.append($('<p>NO.</p><p>STOCK</p><p>COUNT</p><p>JOIN DATE</p> \
+                        <p>ADD DATE</p><p>FIX</p><p>DELETE</p></li>'));
+        $("#stockList").append(stockfirli);
+}
+
 // 재고목록
+const getStockList = () => {
+    return JSON.parse(localStorage.getItem('stockList'));
+}
 
 // 재고목록 출력
-
+const printStockList = () =>{
+    $('#stockList').html('');
+    getStockList().forEach(stock => {
+        let stockLi = $('<li id="stockSecList"></li>');
+        stockLi.append('<p>'+ stock.stno+'</p><p>'+ stock.stname+'</p><p>'+
+                        stock.stamt +'</p><p>'+stock.stindate+'</p><p>'+
+                        stock.strgdate+'</p>'+'<input id="stockFix" type="button" value="fix" />\
+                        <input id="stockDelete" type="button" value="delete" />');
+        $('#stockList').append(stockLi)
+    })
+}
 
 
 

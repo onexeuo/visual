@@ -64,7 +64,8 @@ h1{
     margin-right:20px;
 }
 #shopFirList p:nth-child(2){
-    margin-right:160px;
+    width:200px;
+    margin-right:16px;
 }
 #shopFirList p:nth-child(3){
     margin-right:28px;
@@ -72,6 +73,21 @@ h1{
 #shopFirList p:nth-child(4){
     margin-right:22px;
 }
+#shopSecList{
+    display: flex;
+}
+#shopSecList p {
+    width:27px;
+    margin-right:20px;
+}
+#shopSecList p:nth-child(2){
+    width:180px;
+    overflow: hidden;
+}
+#shopSecList p:nth-child(3){
+    margin-right:28px;
+}
+
 #shopList li{
     border-bottom: 1px solid #fff;
     height:35px;
@@ -105,13 +121,25 @@ h1{
     width:100%;
     height:40px;
     margin: 10px 0;
-
+    display: block;
 }
 #stockTop input[type=text]{
     width:280px;
     height:33px;
     font-size:18px;
     border-radius: 7px;
+}
+#stockDate{
+    display: inline-block;
+    width:280px;
+    height:30px;
+    font-size:17px;
+    border-radius:7px;
+    border:1px solid #fff;
+    color:#fff;
+    text-align: center;
+    line-height: 30px;
+
 }
 #stockTop #stockAdd{
     width:70px;
@@ -150,7 +178,7 @@ h1{
 #stockList{
     border:1px solid #fff;
     padding:10px;
-    height:850px;
+    height:750px;
 }
 #stockList input[type=button]{
     float:right;
@@ -159,14 +187,31 @@ h1{
     padding:5px;
     border:1px solid #fff;
 }
-#stockList #stockDelete{
-    margin-left:5px;
-}
+
 #stockList li{
     border-bottom: 1px solid #fff;
     height:35px;
     line-height: 35px;
     margin-bottom: 5px;;
 }
-
+#stockSecList{
+    display: flex;
+}
+#stockSecList p {
+    width:27px;
+    margin-right:50px;
+}
+#stockSecList p:nth-child(2){
+    width:285px;
+    overflow: hidden;
+}
+#stockSecList p:nth-child(3){
+    margin-right:98px;
+}
+#stockSecList p:nth-child(4){
+    margin-right:128px;
+}
+#stockSecList p:nth-child(5){
+    margin-right:128px;
+}
 
