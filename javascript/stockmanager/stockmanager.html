@@ -17,40 +17,40 @@
             <div id="shop">
                 <h2>SHOP</h2>
                 <p id="shopTop">
-                    <input id="shopname" type="text" placeholder="shop name"/>
+                    <input id="shopname" type="text" placeholder="shop name" max="10"/>
                     <input id="shopAdd" type="button" value="add" />
                 </p>
+                <div id="shopFirList">
+                    <p>NO.</p>
+                    <p>SHOP</p>
+                    <p>COUNT</p>
+                    <!-- <p>FIX</p> -->
+                    <p>DELETE</p>
+                </div>
                 <ul id="shopList">
-                    <!-- <li id="shopFirList">
-                        <p>NO.</p>
-                        <p>SHOP</p>
-                        <p>COUNT</p>
-                        <p>FIX</p>
-                        <p>DELETE</p>
-                    </li> -->
                     <!-- <li><input id="shopDelete" type="button" value="delete" /> -->
                         <!-- <input id="shopFix" type="button" value="fix" /></li> -->
                 </ul>
             </div>
             <div id="stock">
                 <h2>STOCK</h2>
-                <p id="stockTop">
-                    <input id="stockname" type="text"  placeholder="stock name"/>
-                    <input id="stockCount" type="text" placeholder="stock count" />
+                <p id="stockTop" >
+                    <input id="stockname" type="text"  placeholder="stock name" maxlength="10" disabled/>
+                    <input id="stockCount" type="text" placeholder="stock count" max="10" maxlength="3" onKeyup="this.value=this.value.replace(/[^0-9]/g,'')" disabled/>
                     <span id="stockDate"></span>
                     <!-- <input id="stockDate" type="text"  placeholder="date"/> -->
-                    <input id="stockAdd" type="button" value="add" />
+                    <input id="stockAdd" type="button" value="add" disabled />
                 </p>
+                <div id="stockFirList">
+                    <p>NO.</p>
+                    <p>STOCK</p>
+                    <p>COUNT</p>
+                    <!-- <p>JOIN DATE</p> -->
+                    <p>ADD DATE</p>
+                    <!-- <p>FIX</p> -->
+                    <p>DELETE</p>
+                </div>
                 <ul id="stockList">
-                    <!-- <li id="stockFirList">
-                        <p>NO.</p>
-                        <p>STOCK</p>
-                        <p>COUNT</p>
-                        <p>JOIN DATE</p>
-                        <p>ADD DATE</p>
-                        <p>FIX</p>
-                        <p>DELETE</p>
-                    </li> -->
                     <!-- <li>stock1<input id="stockDelete" type="button" value="delete" />
                         <input id="stockFix" type="button" value="fix" /></li> -->
                 </ul>

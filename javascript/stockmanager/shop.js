@@ -1,13 +1,12 @@
 // class shop
 
 class Shop{
-    constructor(shno, shname, shtotst){
-        this.shno = shno;
+    constructor(shno, shname){
+        this.shno = shno !== undefined ? shno : 0;
         this.shname = shname;
-        this.shtotst = shtotst;
+        this.shtotst = 0;
     }
 }
 const shop = new Shop(3, 'adidas', 10);
-console.log(shop);
-console.log(shop.shname);
+
 
