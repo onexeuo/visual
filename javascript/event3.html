@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="event3.js"></script>
+    <title>event3</title>
+    <style>
+        #outer{
+            width:400px; height:400px;
+            background-color: palegreen;
+        }
+        #inner{
+            width:200px; height:200px;
+            background-color: palegoldenrod;
+            line-height: 200px;
+            position:absolute;
+            top:100px; left: 100px;
+            text-align: center;
+        }
+        input[type='button']{
+            width:50px; height:50px;
+            background-color: palevioletred;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner">
+            <input id="btn" type="button" value="click" />
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="event4.js"></script>
+    <title>event4</title>
+    <style>
+        #fruits{
+            display: flex;
+            list-style: none;
+            padding:0;
+        }
+        #fruits li{
+            width:100px; 
+            cursor:pointer;
+        }
+        #fruits .active{
+            color:red; text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <ul id="fruits">
+        <li id="strawberry" class="active">strawberry</li>
+        <li id="apple" >apple</li>
+        <li id="banana" >banana</li>
+        <li id="peach" >peach</li>
+        <li id="orange" >orange</li>
+    </ul>
+</body>
+</html>
