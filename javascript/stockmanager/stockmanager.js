@@ -46,9 +46,9 @@ const initLocalStorage = (() => {
         if(!localStorage.getItem('shopSeq')){
             localStorage.setItem('shopSeq','0');
         }
-        // if(!localStorage.getItem('stockSeq')){
-        //     localStorage.setItem('stockSeq','0');
-        // }
+        if(!localStorage.getItem('stockSeq')){
+            localStorage.setItem('stockSeq','0');
+        }
         if(!localStorage.getItem('shopList')){
             localStorage.setItem('shopList','[]');
         }
@@ -170,6 +170,12 @@ const deleteStock = (key) => {
     printStockList();
 }
 
+// const deleteShop = (key) => {
+//     const shopListArr = getShopList();
+//     shopListArr.splice(key,1);
+//     localStorage.setItem("shopList", JSON.stringify(shopListArr));
+//     printShopList();
+// }
 
 
 

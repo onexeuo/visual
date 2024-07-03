@@ -1,0 +1,53 @@
+*{
+    background-color: rgb(39, 18, 10);
+    color: beige;
+    list-style: none;
+}
+h1{
+    font-size: 30px;
+}
+#main{
+    text-align: center;
+    border: 1px solid beige;
+    width:520px;
+    height:500px;
+}
+input[type='text']{
+    width:97%;
+    height:30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+#addBtn{
+    width:97%;
+    box-sizing: border-box;
+    text-align: center;
+    color:beige;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
