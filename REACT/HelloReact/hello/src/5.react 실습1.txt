@@ -1,0 +1,6 @@
+react 실습 1
+1. 두개의 컴포넌트 (StrinReader.js, StrinOperator.js).를 생성
+2. StrinReader에서는 문자를 입력할ㄹ때마다, StrinOperator에서는 문자를 입력할ㄹ때마다
+      입력받은 문자열의 길이를 계산하여 화면에 출력한다.
+
+
