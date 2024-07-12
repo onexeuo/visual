@@ -1,8 +1,7 @@
 import { useState } from "react";
 
 export default function GetData(){
-    const [data, setData] = useState('');
-    const ids = [];
+    const [ids, setData] = useState([]);
     return(
         <>
             <button onClick={changeData}>download</button> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -10,7 +9,7 @@ export default function GetData(){
                 <option>all</option>
                 <option>{ids}</option>
             </select><br />
-            <span id='data'>{data}</span>
+            <span id='data'>{ids}</span>
         </>
     );
 
@@ -18,5 +17,9 @@ export default function GetData(){
         fetch('http://jsonplaceholder.typicode.com/todos')
         .then(response => response.json())
         .then(result => setData(JSON.stringify(result)))
+
+        // for(const key in Object.keys(ids)){
+        //     console.log(item=>item.id)
+        // }
     };
 }

@@ -7,7 +7,10 @@
 // import StringOperator from "./5.StringOperator";
 // import NumberCounter from "./6.NumberCounter";
 // import ReactUseState from "./7.ReactUseState";
-import GetData from "./8.GetData";
+// import GetData from "./8.GetData";
+// import ReactLayout from "./9.ReactLayout";
+import ReactStyledComponent from "./10.ReactStyledComponent";
+import ReactContextAPI from "./11.ReactContextAPI";
 
 
 function App() {
@@ -22,7 +25,10 @@ function App() {
       // <StringOperator />
       // <NumberCounter />
       // <ReactUseState />
-      <GetData />
+      // <GetData />
+      // <ReactLayout />
+      // <ReactStyledComponent />
+      <ReactContextAPI />
 
   );
 }
